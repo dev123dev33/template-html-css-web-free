@@ -8,6 +8,10 @@
 </head>
 <body>
   <header class="hero">
+    <!-- Tombol Toggle Dark/Light Mode -->
+    <button id="toggle-theme" class="btn-secondary" style="position: absolute; top: 30px; right: 30px; z-index: 999;">
+      🌙/☀️
+    </button>
     <h1>Selamat Datang di Proyek Saya 🚀</h1>
     <p>Ini adalah template HTML & CSS open source yang bisa kamu pakai untuk proyek apapun.</p>
     <a href="#tentang" class="btn-primary">Lihat Proyek</a>
@@ -30,5 +34,23 @@
   <footer>
     <p>© 2025 - Dibuat oleh <a href="https://github.com/USERNAME" target="_blank">USERNAME</a></p>
   </footer>
+
+  <!-- Script Toggle Tema -->
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    const body = document.body;
+    // Set tema dari localStorage saat load
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+    }
+    toggleButton.addEventListener('click', function() {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 </html>
