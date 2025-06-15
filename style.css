@@ -95,6 +95,48 @@ footer a:hover {
   color: #cbd5e1;
 }
 
+body.light-mode {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+body.light-mode main {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+body.light-mode .hero {
+  background: linear-gradient(to right, #60a5fa, #f472b6);
+  color: #1e293b;
+}
+
+body.light-mode .btn-primary {
+  background-color: #6366f1;
+  color: white;
+}
+
+body.light-mode .btn-primary:hover {
+  background-color: #4338ca;
+}
+
+body.light-mode .btn-secondary {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+body.light-mode .btn-secondary:hover {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+body.light-mode footer,
+body.light-mode footer a {
+  color: #64748b;
+}
+body.light-mode footer a:hover {
+  color: #334155;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .hero h1 {
